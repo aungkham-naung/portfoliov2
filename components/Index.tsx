@@ -6,7 +6,7 @@ import SocialIcons from "./SocialIcons";
 
 const Index = () => {
   return (
-    <div className="pt-20 pb-10 min-h-screen ">
+    <section className="pt-20 pb-10 ">
       <div>
         <Spotlight
           className="spotlight-animation -top-40 -left-50 md:-left-32 md:-top-20 min-h-screen"
@@ -58,7 +58,7 @@ const Index = () => {
           <SocialIcons />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
