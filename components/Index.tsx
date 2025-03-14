@@ -6,10 +6,10 @@ import SocialIcons from "./SocialIcons";
 
 const Index = () => {
   return (
-    <section className="pt-20 pb-10 ">
+    <section className="mt-30 md:min-h-screen mb-30 md:mb-0">
       <div>
         <Spotlight
-          className="spotlight-animation -top-40 -left-50 md:-left-32 md:-top-20 min-h-screen"
+          className="spotlight-animation -top-75 -left-10 md:-left-32 md:-top-20 min-h-screen"
           fill="white"
         />
         <Spotlight
@@ -22,11 +22,11 @@ const Index = () => {
         />
       </div>
 
-      <div className="flex flex-row justify-evenly min-h-screen">
-        <div className="hidden md:block min-w-1/2 mx-5 md:ml-10">
+      <div className="flex flex-row justify-evenly">
+        <div className="hidden md:block min-w-1/2 mx-5 md:ml-10 min-h-screen">
           <Scene />
         </div>
-        <div className="min-w-full md:min-w-1/2 mt-20 flex flex-col items-center md:items-start">
+        <div className="min-w-full md:min-w-1/2 mt-20 flex flex-col items-center md:items-start md:pr-8">
           <p className="text-sky-100 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 lg:mb-6 md:text-left text-center">
             Hey there, I am{" "}
             <span className="gradient-text font-bold">Aung Kham Naung</span>

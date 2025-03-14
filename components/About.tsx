@@ -1,24 +1,23 @@
+import { GlobeDemo } from "./ui/globe-demo";
+import Image from "next/image";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn
-} from "@tabler/icons-react";
+import ContactCopy from "./ContactCopy";
+import TechStack from "./TechStack";
 
 const About = () => {
   return (
-    <section className="min-h-screen">
-      <BentoGrid className="max-w-5xl mx-auto md:auto-rows-[20rem]">
+    <section className="min-h-screen mx-10 md:mx-0">
+      <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[22rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
             description={item.description}
+            headerClassName={item.headerClassName}
             header={item.header}
             className={item.className}
-            icon={item.icon}
+            descriptionClassName={item.descriptionClassName}
           />
         ))}
       </BentoGrid>
@@ -26,39 +25,53 @@ const About = () => {
   );
 };
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
-
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    className: "",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    className: "",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />
-  },
-  {
-    title: "The Power of Communication",
+    title: "Hi, I am Aung Kham Naung",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    className: "md:row-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />
+      "With 3 years of experience, I have refined my skills in both frontend and backend development to build dynamic websites.",
+    header: <Image src="/logo.png" alt="logo" width={150} height={100} />,
+    headerClassName: "justify-center h-screen",
+    className: ""
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />
+    title: "B.S & M.S in Computer Science",
+    headerClassName: "justify-center h-screen",
+
+    description:
+      "I am currently enrolled in the acclerated M.S program at IIT and expects to graduate by the December of 2026.",
+    header: <Image src="/IIT.png" alt="iit_logo" width={200} height={400} />
+  },
+  {
+    title: "Availablity & Flexibility",
+    headerClassName: "justify-center h-screen",
+    description: "I'm based in Chicago, IL and open to any opportunity.",
+    header: <GlobeDemo />
+  },
+  {
+    title: "Technology Stack",
+    headerClassName: "justify-center h-screen",
+
+    description:
+      "I love solving problems and building things through code and I specialize in various languages, frameworks, and tools to build scalable applications. ",
+    header: <TechStack />,
+    className: "md:col-span-2"
+  },
+  {
+    title: "Contact Me",
+    descriptionClassName:
+      "font-sans font-normal text-gray-400 text-center text-md lg:text-xl pb-4",
+    description: <ContactCopy />,
+    header: (
+      <Image
+        src="/phone.png"
+        alt="phone"
+        width={400}
+        height={10}
+        className="rounded-xl"
+      />
+    ),
+    headerClassName: ""
   }
 ];
 
