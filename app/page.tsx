@@ -1,5 +1,5 @@
-// import About from "@/components/About";
-// import Index from "@/components/Index";
+import About from "@/components/About";
+import Index from "@/components/Index";
 import Project from "@/components/Project";
 
 export default function Home() {

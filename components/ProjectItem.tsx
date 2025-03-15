@@ -1,10 +1,10 @@
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 
 interface ProjectItemProps {
   title: string;
   description: string;
-  // imgUrl: string;
+  imgUrl: string;
   github: string;
   icons: string[];
   live?: string;
@@ -13,16 +13,16 @@ interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
   description,
-  // imgUrl,
+  imgUrl,
   github,
   icons,
   live
 }) => {
   return (
-    <div className="text-white">
+    <div className="feature-border feature-bg border-2 text-white px-6 py-4 rounded-xl">
+      <Image src={imgUrl} alt={title} width={200} height={200} />
       <h2>{title}</h2>
       <p>{description}</p>
-      {/* <Image src={imgUrl} alt={title} /> */}
       <p>{github}</p>
       <ul>
         {icons.map((icon) => (
