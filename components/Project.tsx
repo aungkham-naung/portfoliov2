@@ -3,20 +3,13 @@ import ProjectItem from "./ProjectItem";
 
 const projects = [
   {
-    title: "StoreIt",
+    title: "StoreIt - Storage Management Platform",
     description:
       "StoreIt is a secure cloud storage solution designed to help individuals store, manage, back up, and share files seamlessly across all devices. With a user-friendly interface and robust functionality, StoreIt ensures smooth file organization and accessibility anytime, anywhere.",
     imgUrl: "/project_ss/drive.png",
     github: "https://github.com/aungkham-naung/storage-drive",
     live: "https://storage-drive-delta.vercel.app/sign-in",
-    icons: [
-      "reactjs",
-      "nextjs2",
-      "typescript",
-      "appwrite",
-      "tailwindcss",
-      "shadcnui"
-    ]
+    icons: ["reactjs", "nextjs2", "typescript", "appwrite", "tailwindcss"]
   },
   {
     title: "Check-in Manager",
