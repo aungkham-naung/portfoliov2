@@ -235,3 +235,11 @@ body {
 .feature-border {
   border-color: #1c1c21;
 }
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
