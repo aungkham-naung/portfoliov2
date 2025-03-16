@@ -11,6 +11,8 @@ interface ProjectItemProps {
   github: string;
   icons: string[];
   live?: string;
+  onPrev: () => void;
+  onNext: () => void;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
@@ -19,10 +21,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   imgUrl,
   github,
   icons,
-  live
+  live,
+  onPrev,
+  onNext
 }) => {
   return (
-    <div className="feature-border feature-bg border-2 text-white px-6 py-4 rounded-xl p-4 lg:hidden">
+    <div className="feature-border feature-bg border-2 text-white px-6 py-4 rounded-xl p-4 ">
       <div className="flex justify-center items-center rounded-xl max-w-fit-content mb-5">
         <Image
           src={imgUrl}
@@ -77,7 +81,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         </div>
       </div>
 
-      <div></div>
+      <div className="flex flex-row justify-between mt-6 px-4">
+        <button className="cursor-pointer" onClick={onPrev}>
+          <Image src="/left-arrow.png" alt="left" width={20} height={20} />
+        </button>
+        <button className="cursor-pointer" onClick={onNext}>
+          <Image src="/right-arrow.png" alt="left" width={20} height={20} />
+        </button>
+      </div>
     </div>
   );
 };

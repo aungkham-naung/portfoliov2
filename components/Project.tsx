@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import ProjectItem from "./ProjectItem";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -56,22 +58,43 @@ const projects = [
 ];
 
 const Project = () => {
+  const [index, setIndex] = React.useState(0);
+  const totalProjects = projects.length;
+
+  const handlePrev = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? totalProjects - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setIndex((prevIndex) =>
+      prevIndex === totalProjects - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <section>
-      <h1>Projects</h1>
+    <section className="mt-10 mb-10">
+      <div className="flex justify-start">
+        <h1 className="text-4xl text-white mb-7 font-bold ">Projects</h1>
+      </div>
 
       <div className="flex flex-col gap-8">
-        {projects.map((project) => (
-          <ProjectItem
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.imgUrl}
-            github={project.github}
-            live={project.live}
-            icons={project.icons}
-          />
-        ))}
+        <AnimatePresence>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ProjectItem
+              {...projects[index]}
+              onPrev={handlePrev}
+              onNext={handleNext}
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
