@@ -34,6 +34,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           width={800}
           height={100}
           className="rounded-xl"
+          priority
         />
       </div>
       <h2 className="font-bold text-xl md:text-3xl lg:text-4xl mb-4 ">
