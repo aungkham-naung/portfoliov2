@@ -9,7 +9,7 @@ const Index = () => {
     <section className="mt-30 md:min-h-screen mb-30 md:mb-0">
       <div>
         <Spotlight
-          className="spotlight-animation -top-75 -left-10 md:-left-32 md:-top-20 min-h-screen"
+          className="spotlight-animation -top-40 -left-50 md:-left-32 md:-top-100 min-h-screen"
           fill="white"
         />
         <Spotlight

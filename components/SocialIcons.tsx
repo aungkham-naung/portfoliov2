@@ -48,7 +48,7 @@ const SocialIcons = () => {
           <div className="h-12 w-12 rounded-full bg-gray-50 flex items-center justify-center transition-transform duration-200 hover:scale-150">
             <FontAwesomeIcon
               icon={item.icon}
-              className="h-6 w-6"
+              size="2x"
               style={{ color: item.color }}
             />
           </div>
