@@ -44,7 +44,7 @@ const items = [
   },
   {
     title: "Availablity & Flexibility",
-    headerClassName: "justify-center h-screen",
+    headerClassName: "justify-center",
     description: "I'm based in Chicago, IL and open to any opportunity.",
     header: <GlobeDemo />
   },
@@ -71,7 +71,7 @@ const items = [
         className="rounded-xl"
       />
     ),
-    headerClassName: ""
+    headerClassName: "justify-center"
   }
 ];
 
