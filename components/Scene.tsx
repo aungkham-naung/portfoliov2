@@ -5,7 +5,6 @@ import React, { Suspense, useEffect, useRef } from "react";
 import Model from "./Model";
 import * as THREE from "three";
 
-// ✅ Loader while model is loading
 function Loader() {
   const { progress } = useProgress();
   return <Html center>{progress.toFixed(0)}% loaded</Html>;
@@ -34,6 +33,7 @@ const Scene: React.FC = () => {
           maxPolarAngle={Math.PI / 2}
           minDistance={300}
           maxDistance={0}
+          enableZoom={false}
           enableDamping
         />
       </Suspense>

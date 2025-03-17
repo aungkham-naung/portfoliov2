@@ -45,7 +45,10 @@ const Contact = () => {
       );
   };
   return (
-    <section className="w-full min-h-screen flex justify-center mt-20">
+    <section
+      id="contact"
+      className="w-full min-h-screen flex justify-center mt-20"
+    >
       <div className="relative min-h-screen flex justify-center items-center w-full lg:mx-20">
         <Image
           src="/terminal.png"

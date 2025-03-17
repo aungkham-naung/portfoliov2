@@ -74,7 +74,7 @@ const Project = () => {
   };
 
   return (
-    <section className="mt-10 mb-10">
+    <section id="project" className="mt-10 mb-10">
       <div className="flex justify-start">
         <h1 className="text-4xl text-white mb-7 font-bold ">Projects</h1>
       </div>

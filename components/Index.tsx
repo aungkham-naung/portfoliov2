@@ -6,7 +6,7 @@ import SocialIcons from "./SocialIcons";
 
 const Index = () => {
   return (
-    <section className="mt-30 md:min-h-screen mb-30 md:mb-0">
+    <section id="home" className="mt-30 md:min-h-screen mb-30 md:mb-0">
       <div>
         <Spotlight
           className="spotlight-animation -top-40 -left-50 md:-left-32 md:-top-100 min-h-screen"
@@ -23,7 +23,10 @@ const Index = () => {
       </div>
 
       <div className="flex flex-row justify-evenly">
-        <div className="hidden md:block min-w-1/2 mx-5 md:ml-10 min-h-screen">
+        <div
+          className="hidden md:block min-w-1/2 mx-5 md:ml-10 min-h-screen"
+          style={{ pointerEvents: "none" }}
+        >
           <Scene />
         </div>
         <div className="min-w-full md:min-w-1/2 mt-20 flex flex-col items-center md:items-start md:pr-8">
@@ -44,12 +47,7 @@ const Index = () => {
               />
             </span>
           </div>
-          <p className="text-white mb-3 lg:mb-6 text-lg md:text-2xl lg:text-3xl md:text-left text-center">
-            BS & MS in Computer Science at{" "}
-            <span className="text-accent-blue">
-              Illinois Institute of Technology
-            </span>
-          </p>
+
           <p className="text-white mb-3 lg:mb-6 text-lg md:text-2xl lg:text-3xl md:text-left text-center text-p-500">
             <span className="text-white">Full Stack Developer</span> |{" "}
             <span className="text-white">Front End Developer</span> |{" "}

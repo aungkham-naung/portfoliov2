@@ -7,7 +7,7 @@ import TechStack from "./TechStack";
 
 const About = () => {
   return (
-    <section className="min-h-screen mx-10 md:mx-0">
+    <section id="about" className="min-h-screen mx-10 md:mx-0">
       <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[22rem]">
         {items.map((item, i) => (
           <BentoGridItem
